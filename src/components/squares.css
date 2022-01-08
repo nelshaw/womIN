@@ -6,12 +6,14 @@
   grid-gap: 30px;
   padding: 220px;
   padding-left: 65px;
+
 }
 
 .square {
   background-color: #FFF;    
   border-radius: 10px;
   padding-bottom: 5px;
+  box-shadow: 5px 5px #e2e2e2;
 }
 
 body {

@@ -5,14 +5,14 @@
   }
   
   body {
-    background: #D1E2C4;
+    background: rgb(200, 214, 200);
   }
   
   .container {
-    left: 5%;
+    left: 2%;
     top: 5px;
     position: absolute;
-    margin: 150px auto;
+    margin-top:80px;
     width: 300px;
     height: 60px
   }
@@ -27,6 +27,7 @@
     border: none;
     border-radius: 100px;
     outline: none;
+    background-color:#fff;
   }
   
   .search-button {

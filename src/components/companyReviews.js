@@ -1,12 +1,14 @@
 import React from 'react'
+import CompanyOverview from './companyOverview';
 import Search from './search';
-import Squares from './squares';
+import Topbar from './topbar';
 
 const CompanyReviews = () => {
     return (
         <div>
+            <Topbar/>
             <Search/>
-            <Squares/>
+            <CompanyOverview/>
         </div>
     );
 }
