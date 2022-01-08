@@ -2,7 +2,7 @@ import { BrowserRouter as Router, useRoutes } from "react-router-dom";
 import CompanyReviews from "./components/companyReviews";
 import Home from "./components/home";
 import Login from "./components/login/login";
-import PersonalJobDashBoard from "./components/personalJobDashboard";
+import PersonalJobDashBoard from "./components/dashboard/personalJobDashboard";
 import SignUp from "./components/signup/signUp";
 import React from "react";
 
