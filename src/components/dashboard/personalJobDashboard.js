@@ -177,20 +177,21 @@ function PersonalJobDashBoard(){
   };
 
   return (
-    <div className="table-container">
+    <div className="interviewTableContainer">
       <form onSubmit={handleEditFormSubmit}>
-        <table>
+      <h3 className="interviewPersonalTitle">Personal Interview</h3>
+        <table className="interviewPersonalTable">
           <thead>
-            <tr>
-                <th>Job Title</th>
-                <th>Company</th>
-                <th>Date Applied</th>
-                <th>Stage</th>
-                <th>Job Posting</th>
-                <th>Actions</th>
+            <tr className="interviewTableHeader">
+                <th className="interviewDashTableHeader">Job Title</th>
+                <th className="interviewDashTableHeader">Company</th>
+                <th className="interviewDashTableHeader">Date Applied</th>
+                <th className="interviewDashTableHeader">Stage</th>
+                <th className="interviewDashTableHeader">Job Posting</th>
+                <th className="interviewDashTableHeader">Actions</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="interviewTableContent">
             {applications.map((application) => (
               <Fragment>
                 {editApplicationId === application.id ? (
@@ -211,16 +212,62 @@ function PersonalJobDashBoard(){
           </tbody>
         </table>
       </form>
-
-      <h2>Add an application</h2>
-      <form onSubmit={handleAddFormSubmit}>
-        <input type="text" name="jobTitle" required="required" placeholder="Enter a job title..." onChange={handleAddFormChange}/>
-        <input type="text" name="company" required="required" placeholder="Enter a company..." onChange={handleAddFormChange}/>
-        <input type="date" name="dateApplied" required="required" onChange={handleAddFormChange}/>
-        <input type="text" name="stage" required="required" placeholder="Enter your current stage..." onChange={handleAddFormChange}/>
-        <input type="url" name="jobPosting" required="required" placeholder="Enter the job posting link..." onChange={handleAddFormChange}/>
-        <button type="submit">Add</button>
-      </form>
+      <div className="addNewInterview">
+        <span className="addInterviewTitle">Add an application</span>
+        <form className="timeTableUpdateForm" onSubmit={handleAddFormSubmit}>
+          <div className="timeTableUpdateItem">
+            <label>Job Title</label>
+            <input
+              type="text"
+              className="timeTableInput"
+              name="jobTitle"
+              required="required"
+              placeholder="Enter a job title..."
+              onChange={handleAddFormChange} />
+          </div>
+          <div className="timeTableUpdateItem">
+            <label>Company</label>
+            <input 
+              type="text" 
+              className="timeTableInput"
+              name="company" 
+              required="required" 
+              placeholder="Enter a company..." 
+              onChange={handleAddFormChange} />
+          </div>
+          <div className="timeTableUpdateItem">
+            <label>Date Applied</label>
+            <input 
+              type="date" 
+              className="timeTableInput"
+              name="dateApplied" 
+              required="required" 
+              onChange={handleAddFormChange} />
+          </div>
+          <div className="timeTableUpdateItem">
+            <label>Stage</label>
+            <input 
+              type="text" 
+              className="timeTableInput"
+              name="stage" 
+              required="required" 
+              placeholder="Enter your current stage..." 
+              onChange={handleAddFormChange} />
+          </div>
+          <div className="timeTableUpdateItem">
+            <label>Job Posting</label>
+            <input 
+              type="url" 
+              className="timeTableInput"
+              name="jobPosting" 
+              required="required" 
+              placeholder="Enter the job posting link..." 
+              onChange={handleAddFormChange} />
+          </div>
+          <button className="addTimetableButton" type="submit">Add</button>
+        </form>
+      </div>
+      
     </div>
   );
 };
