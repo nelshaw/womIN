@@ -11,7 +11,7 @@ export default function Sidebar(){
                     <h3 className="sidebarTitle">Dashboard</h3>
                     <ul className= "sidebarList">
                         <Link to="/" className="sidebarLink">
-                            <li className="sidebarListItem active">
+                            <li className="sidebarListItem">
                                 <Home className="sidebarIcon"/>   
                                 Home
                             </li>
@@ -34,7 +34,7 @@ export default function Sidebar(){
                     <h3 className="sidebarTitle">Quick Menu</h3>
                     <ul className= "sidebarList">
                         <Link to="/" className="sidebarLink">
-                            <li className="sidebarListItem active">
+                            <li className="sidebarListItem">
                                 <Home className="sidebarIcon"/>   
                                 Home
                             </li>
