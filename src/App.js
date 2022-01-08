@@ -4,6 +4,7 @@ import Home from "./components/home";
 import Login from "./components/login";
 import PersonalJobDashBoard from "./components/personalJobDashboard";
 import SignUp from "./components/signUp";
+import React from "react";
 
 const App = () => {
   let routes = useRoutes([
