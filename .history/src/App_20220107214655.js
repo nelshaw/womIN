@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Routes, Route, useRoutes} from "react-router-dom"
 import CompanyReviews from "./components/companyReviews"
-import Home from "./components/home"
+import Home from "./home"
 import Login from "./components/login"
 import PersonalJobDashBoard from "./components/personalJobDashboard"
 import SignUp from "./components/signUp"
