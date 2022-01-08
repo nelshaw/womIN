@@ -1,0 +1,59 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #676f54;
+  text-align: left;
+  padding: 8px;
+  font-size: 18px;
+}
+
+th {
+  background-color: #9CC69B;
+}
+
+td {
+  background-color: #bde4a8;
+}
+
+form {
+  display: flex;
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 18px;
+}
+
+button {
+  background-color: #9CC69B;
+  border:solid 1px #676f54;
+  border-radius: 15px;
+}
+
+input {
+  background-color: #bde4a8;
+  border: none;
+  border:solid 1px #676f54;
+  border-radius: 40px;
+  width: 250px;
+  padding: 10px;
+}
+
+::placeholder { 
+  color: black;
+}
