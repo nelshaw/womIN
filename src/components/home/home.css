@@ -1,0 +1,43 @@
+/* body {
+    background-color: #D7f2ba;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+.column {
+    display: table-cell;
+    background-color: #9cc69b;
+    box-shadow: 5px 10px #676f54;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 200px;
+    padding-right: 200px;
+} */
+
+.home {
+    flex: 4;
+}
+
+.homeWidget {
+    display: flex;
+    margin: 20px;
+}

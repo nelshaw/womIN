@@ -1,0 +1,60 @@
+.upcomingInterviewWidget {
+    flex: 2;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+}
+
+.interviewTitle {
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.interviewTable {
+    width: 100%;
+    border-spacing: 15px;
+}
+
+.interviewRole {
+    display: flex;
+    align-items: left;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.job {
+    margin: 0px;
+    padding: 0px;
+    align-items: left;
+    font-size: 12px;
+}
+
+.interviewTableHeader {
+    text-align: left;
+    font-size: 15px;
+}
+
+.interviewDate,
+.interviewCompany {
+    font-weight: 300;
+}
+
+.button {
+    padding: 5px 7px;
+    border: none;
+    border-radius: 10px;
+}
+
+.button.Offer {
+    background-color: rgb(200, 214, 200);
+}
+
+.button.Rejected {
+    background-color: rgb(240, 169, 169);
+}
+
+.button.Pending {
+    background-color: rgb(190, 187, 187);
+}
