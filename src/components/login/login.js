@@ -45,12 +45,12 @@ function Login() {
 
   return (
     <div className="login-wrapper">
-      <h1>This is the Login page</h1>
+      <h1>womIN</h1>
       <div className="loginContainer">
         {loading && <h1>Loading...</h1>}
+        <h2>Login</h2>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
               value={email}
@@ -59,7 +59,6 @@ function Login() {
             />
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
               value={password}
@@ -67,12 +66,13 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-
           <Button variant="primary" type="submit">
             Log in
           </Button>
         </Form>
       </div>
+      <p>Don't have an account? Sign up.</p>
+      <p>Forgot password?</p>
     </div>
   );
 }

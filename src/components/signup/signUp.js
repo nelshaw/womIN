@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import { Link } from "react-scroll";
+import "./signup.css";
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -19,8 +20,8 @@ function SignUp() {
   const [techstack, setTechStack] = useState([]);
 
   const [loading, setLoading] = useState(false);
-  const [mentorHidden, setMentorHidden] = useState(true);
-  const [detailsHidden, setDetailsHidden] = useState(true);
+  //   const [mentorHidden, setMentorHidden] = useState(true);
+  //   const [detailsHidden, setDetailsHidden] = useState(true);
 
   const techOptions = [
     "Java",
@@ -105,13 +106,12 @@ function SignUp() {
 
   return (
     <div className="signup-wrapper">
-      <h1>This is the SignUp page</h1>
-
       <div className="signupContainer">
+        <h1>womIN</h1>
         {loading && <h1>Loading...</h1>}
+        <h2>Create an Account</h2>
         <Form>
           <Form.Group controlId="name">
-            <Form.Label>Name</Form.Label>
             <Form.Control
               type="name"
               value={name}
@@ -120,7 +120,6 @@ function SignUp() {
             />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
               value={email}
@@ -129,7 +128,6 @@ function SignUp() {
             />
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
               value={password}
@@ -138,7 +136,6 @@ function SignUp() {
             />
           </Form.Group>
           <Form.Group controlId="confirmPassword">
-            <Form.Label>Confirm Password</Form.Label>
             <Form.Control
               type="password"
               value={confirmPassword}
@@ -148,56 +145,67 @@ function SignUp() {
           </Form.Group>
 
           <Link
+            className="signupBtn"
             activeClass="active"
             to="isMentor"
             spy={true}
             smooth={true}
-            onClick={(e) => setMentorHidden(false)}
+            // onClick={(e) => setMentorHidden(false)}
           >
             Sign Up
           </Link>
         </Form>
       </div>
 
-      <div className="middleContainer" id="isMentor" hidden={mentorHidden}>
+      <div
+        className="middleContainer"
+        id="isMentor"
+        //   hidden={mentorHidden}
+      >
         <h1>Are you a mentor or mentee?</h1>
 
-        <Link
-          activeClass="active"
-          to="mentor"
-          spy={true}
-          smooth={true}
-          onClick={(e) => {
-            setIsMentor(true);
-            setDetailsHidden(false);
-          }}
-        >
-          Mentor
-        </Link>
+        <div className="mBtnWrapper">
+          <Link
+            className="mBtn"
+            activeClass="active"
+            to="mentor"
+            spy={true}
+            smooth={true}
+            onClick={(e) => {
+              setIsMentor(true);
+              //   setDetailsHidden(false);
+            }}
+          >
+            Mentor
+          </Link>
 
-        <Link
-          activeClass="active"
-          to="mentee"
-          spy={true}
-          smooth={true}
-          onClick={(e) => {
-            setIsMentor(false);
-            setDetailsHidden(false);
-          }}
-        >
-          Mentee
-        </Link>
+          <Link
+            className="mBtn"
+            activeClass="active"
+            to="mentee"
+            spy={true}
+            smooth={true}
+            onClick={(e) => {
+              setIsMentor(false);
+              //   setDetailsHidden(false);
+            }}
+          >
+            Mentee
+          </Link>
+        </div>
       </div>
 
       <div
         className="mentorContainer"
         id="mentor"
-        hidden={detailsHidden || !isMentor}
+        hidden={
+          // detailsHidden ||
+          !isMentor
+        }
       >
         <h1>Mentor Details</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="university">
-            <Form.Label>Your University</Form.Label>
             <Form.Control
               type="text"
               value={university}
@@ -206,7 +214,6 @@ function SignUp() {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Your Program</Form.Label>
             <Form.Control
               type="text"
               value={program}
@@ -215,7 +222,6 @@ function SignUp() {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Year of Graduation</Form.Label>
             <Form.Control
               type="number"
               value={year}
@@ -224,7 +230,6 @@ function SignUp() {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Current Company</Form.Label>
             <Form.Control
               type="text"
               value={company}
@@ -233,7 +238,6 @@ function SignUp() {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Years of Experience</Form.Label>
             <Form.Control
               type="number"
               value={yoe}
@@ -267,12 +271,14 @@ function SignUp() {
       <div
         className="menteeContainer"
         id="mentee"
-        hidden={detailsHidden || isMentor}
+        hidden={
+          // detailsHidden ||
+          isMentor
+        }
       >
         <h1>Mentee Details</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="university">
-            <Form.Label>Your University</Form.Label>
             <Form.Control
               type="text"
               value={university}
@@ -281,7 +287,6 @@ function SignUp() {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Your Program</Form.Label>
             <Form.Control
               type="text"
               value={program}
@@ -290,7 +295,6 @@ function SignUp() {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Year of Graduation</Form.Label>
             <Form.Control
               type="number"
               value={year}
