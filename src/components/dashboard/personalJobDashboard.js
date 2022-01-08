@@ -1,12 +1,13 @@
 import { nanoid } from "nanoid";
 import "./personalJobDashboard.css";
-import data from "./personalJobDashboardData.json"
 import ReadOnlyRow from "./dashboardComponents/ReadOnlyRow";
 import EditableRow from "./dashboardComponents/EditableRow";
-import React, { useState, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
+import axios from "axios";
+
 
 function PersonalJobDashBoard(){
-  const [applications, setApplications] = useState(data);
+  const [applications, setApplications] = useState([]);
   const [addFormData, setAddFormData] = useState({
     jobTitle: "",
     company: "",
@@ -49,20 +50,58 @@ function PersonalJobDashBoard(){
     setEditFormData(newFormData);
   };
 
-  const handleAddFormSubmit = (event) => {
-    event.preventDefault();
+  useEffect(() => {
+    getAllApplications();
+  }, []);
 
-    const newApplication = {
-      id: nanoid(),
-      jobTitle: addFormData.jobTitle,
-      company: addFormData.company,
-      dateApplied: addFormData.dateApplied,
-      stage: addFormData.stage,
-      jobPosting: addFormData.jobPosting,
-    };
+  const getAllApplications = async() => {
+    try {
+      const config = {
+        headers: {
+          "content-type": "application/json",
+        },
+      };
 
-    const newApplications = [...applications, newApplication];
-    setApplications(newApplications);
+      const { data } = await axios.get(
+        "http://localhost:5000/api/dashboard",
+        {},
+        config
+      );
+
+      console.log(data);
+
+      setApplications(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  const handleAddFormSubmit = async(e) => {
+    e.preventDefault();
+    try {
+      const config = {
+        headers: {
+          "content-type": "application/json",
+        },
+      };
+      console.log(addFormData.jobTitle);
+      const { data } = await axios.post(
+        "http://localhost:5000/api/dashboard",
+        {
+          jobTitle: addFormData.jobTitle,
+          company: addFormData.company,
+          dateApplied: addFormData.dateApplied,
+          stage: addFormData.stage,
+          jobPosting: addFormData.jobPosting,
+        },
+        config
+      );
+
+      setApplications([...applications, data]);
+
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const handleEditFormSubmit = (event) => {
@@ -106,7 +145,8 @@ function PersonalJobDashBoard(){
     setEditApplicationId(null);
   };
 
-  const handleDeleteClick = (applicationId) => {
+  const handleDeleteClick = async(applicationId) => {
+    console.log(applicationId);
     const newApplications = [...applications];
 
     const index = applications.findIndex((application) => application.id === applicationId);
@@ -114,6 +154,26 @@ function PersonalJobDashBoard(){
     newApplications.splice(index, 1);
 
     setApplications(newApplications);
+
+    try {
+      const config = {
+        headers: {
+          "content-type": "application/json",
+        },
+      };
+
+      const { data } = await axios.delete(
+        "http://localhost:5000/api/dashboard/",
+        {},
+        config
+      );
+
+      console.log(data);
+
+      setApplications(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
