@@ -3,7 +3,19 @@ const asyncHandler = require("express-async-handler");
 const generateToken = require("../utils/generateToken");
 
 const registerUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const {
+    name,
+    email,
+    password,
+    isMentor,
+    university,
+    program,
+    year,
+    company,
+    coi,
+    yoe,
+    techstack,
+  } = req.body;
 
   const userExists = await User.findOne({ email });
 
@@ -16,6 +28,14 @@ const registerUser = async (req, res) => {
     name,
     email,
     password,
+    isMentor,
+    university,
+    program,
+    year,
+    company,
+    coi,
+    yoe,
+    techstack,
   });
 
   if (user) {

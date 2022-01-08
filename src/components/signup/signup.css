@@ -1,0 +1,94 @@
+.signup-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.signupContainer,
+.middleContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.mentorContainer,
+.menteeContainer {
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.mBtnWrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signupContainer input,
+.mentorContainer input,
+.menteeContainer input {
+  background-color: #d1e2c4cb;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 15px;
+  margin: 5px;
+  width: 250px;
+}
+
+.signupBtn,
+.mBtn,
+.mentorContainer Button,
+.menteeContainer Button {
+  background-color: #d1e2c4;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px 5px 20px 5px;
+  width: 200px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.mBtn {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.mentorContainer label,
+.menteeContainer label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+  font-size: 1em;
+}
+
+.mentorContainer select,
+.menteeContainer select {
+  align-items: center;
+  padding: 10px;
+  border: none;
+  width: 250px;
+  background-color: #d1e2c4;
+}

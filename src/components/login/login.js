@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import "./login.css";
 import axios from "axios";
 import { Form, Button } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const logout = () => {
     localStorage.removeItem("userInfo");
-    // const history = useHistory();
-    // history.push("/login");
   };
 
   const submitHandler = async (e) => {
@@ -38,6 +38,7 @@ function Login() {
 
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -45,12 +46,12 @@ function Login() {
 
   return (
     <div className="login-wrapper">
-      <h1>This is the Login page</h1>
+      <h1>womIN</h1>
       <div className="loginContainer">
         {loading && <h1>Loading...</h1>}
+        <h2>Login</h2>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
               value={email}
@@ -59,7 +60,6 @@ function Login() {
             />
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
               value={password}
@@ -67,12 +67,15 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-
           <Button variant="primary" type="submit">
             Log in
           </Button>
         </Form>
       </div>
+      <Link className="p" to="/signUp">
+        Don't have an account? Sign up.
+      </Link>
+      <p>Forgot password?</p>
     </div>
   );
 }

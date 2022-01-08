@@ -21,6 +21,34 @@ const userSchema = mongoose.Schema(
       required: true,
       default: false,
     },
+    university: {
+      type: String,
+      required: false,
+    },
+    program: {
+      type: String,
+      required: false,
+    },
+    year: {
+      type: Number,
+      required: false,
+    },
+    company: {
+      type: String,
+      required: false,
+    },
+    coi: {
+      type: [String],
+      required: false,
+    },
+    yoe: {
+      type: Number,
+      required: false,
+    },
+    techstack: {
+      type: [String],
+      required: false,
+    },
   },
   {
     timestamps: true,
