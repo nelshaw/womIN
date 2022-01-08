@@ -1,5 +1,6 @@
 import React from "react";
 import "./upcomingInterviewWidget.css"
+import { Link } from "react-router-dom";
 
 export default function UpcomingInterviewWidget(){
     const Button = ({type}) =>{
@@ -8,6 +9,7 @@ export default function UpcomingInterviewWidget(){
     return(
         <div className="upcomingInterviewWidget">
             <h3 className="interviewTitle">Upcoming Interview</h3>
+            <Link to="/personalJobDashBoard" className="sidebarLink">
             <table className="interviewTable">
                 <tr className="interviewRow">
                   <th className="interviewTableHeader">Role</th>  
@@ -58,7 +60,7 @@ export default function UpcomingInterviewWidget(){
                     <td className="status"> <Button type= "Rejected"/></td>
                 </tr>
             </table>
-               
+            </Link>
         </div>
     )
 }

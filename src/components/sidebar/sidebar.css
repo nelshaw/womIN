@@ -44,3 +44,8 @@
     margin-right: 5px;
     font-size: 15px !important;
 }
+
+.sidebarLink {
+    color: #555;
+    text-decoration: none;
+}
