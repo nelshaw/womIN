@@ -1,0 +1,52 @@
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #d1e2c4;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="email"],
+input[type="password"] {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 2px;
+  padding: 10px 15px;
+  margin: 5px;
+  width: 250px;
+}
+
+Button {
+  background-color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px 5px 20px 5px;
+  width: 70%;
+  margin-top: 40px;
+}
+
+p,
+.p {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  text-decoration: underline;
+}

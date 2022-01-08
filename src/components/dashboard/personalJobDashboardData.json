@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "jobTitle": "Software Development Engineer Intern",
+    "company": "Amazon",
+    "dateApplied": "2022-01-01",
+    "stage": "Online Assessment",
+    "jobPosting": "https://www.amazon.jobs/en/jobs/1559866/software-development-engineer-intern-summer-2022-canada"
+  },
+  {
+    "id": 2,
+    "jobTitle": "Network Reliability Intern",
+    "company": "Facebook",
+    "dateApplied": "2022-01-01",
+    "stage": "Interview",
+    "jobPosting": "https://www.facebookcareers.com/v2/jobs/1738843639823714/"
+  },
+  {
+    "id": 3,
+    "jobTitle": "Product & Test Engineering Intern",
+    "company": "Facebook",
+    "dateApplied": "2022-01-01",
+    "stage": "Interview",
+    "jobPosting": "https://www.facebookcareers.com/v2/jobs/236173178661109/"
+  },
+  {
+    "id": 4,
+    "jobTitle": "Automation Engineer Intern",
+    "company": "Facebook",
+    "dateApplied": "2022-01-01",
+    "stage": "Online Assessment",
+    "jobPosting": "https://www.facebookcareers.com/v2/jobs/179578240863887/"
+  },
+  {
+    "id": 5,
+    "jobTitle": "Aerospace Engineer Intern",
+    "company": "Bell",
+    "dateApplied": "2022-01-01",
+    "stage": "Interview",
+    "jobPosting": "https://textron.taleo.net/careersection/ur_bell/jobdetail.ftl?job=292817&tz=GMT-05%3A00&tzname=America%2FToronto"
+  }
+]
