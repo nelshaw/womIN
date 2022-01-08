@@ -10,6 +10,8 @@ function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const [user, setUser] = useState([]);
+
   const logout = () => {
     localStorage.removeItem("userInfo");
   };

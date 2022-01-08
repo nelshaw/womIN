@@ -14,7 +14,7 @@ const App = () => {
     { path: "/companyReviews", element: <CompanyReviews /> },
     { path: "/personalJobDashBoard", element: <PersonalJobDashBoard /> },
     { path: "/signUp", element: <SignUp /> },
-    {path: '/network', element: <Network />}
+    { path: "/network", element: <Network /> },
   ]);
   return routes;
 };
