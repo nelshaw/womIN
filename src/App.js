@@ -5,6 +5,7 @@ import Login from "./components/login";
 import PersonalJobDashBoard from "./components/personalJobDashboard";
 import SignUp from "./components/signUp";
 import React from "react";
+import Network from "./components/network/network";
 
 const App = () => {
   let routes = useRoutes([
@@ -13,6 +14,7 @@ const App = () => {
     { path: "/companyReviews", element: <CompanyReviews /> },
     { path: "/personalJobDashBoard", element: <PersonalJobDashBoard /> },
     { path: "/signUp", element: <SignUp /> },
+    {path: '/network', element: <Network />}
   ]);
   return routes;
 };
