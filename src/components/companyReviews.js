@@ -1,11 +1,14 @@
 import React from 'react'
+import Search from './search';
+import Squares from './squares';
 
-function CompanyReviews(){
+const CompanyReviews = () => {
     return (
         <div>
-            <h1>This is the company review page</h1>
+            <Search/>
+            <Squares/>
         </div>
-    )
+    );
 }
 
 export default CompanyReviews
