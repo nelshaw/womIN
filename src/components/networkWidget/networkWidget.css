@@ -1,0 +1,64 @@
+.networkWidget {
+    flex: 1;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* .image {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+} */
+
+.connectionList {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.role {
+    font-weight: 400;
+    font-size: 8px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 5px, 7px;
+    cursor: pointer;
+    background-color: #eeeef7;
+    color: #555;
+}
+
+.icon {
+    font-size: 8px !important;
+    margin: 5px;
+}
