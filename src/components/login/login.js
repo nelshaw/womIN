@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import "./login.css";
 import axios from "axios";
 import { Form, Button } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const logout = () => {
     localStorage.removeItem("userInfo");
-    // const history = useHistory();
-    // history.push("/login");
   };
 
   const submitHandler = async (e) => {
@@ -38,6 +38,7 @@ function Login() {
 
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -71,7 +72,9 @@ function Login() {
           </Button>
         </Form>
       </div>
-      <p>Don't have an account? Sign up.</p>
+      <Link className="p" to="/signUp">
+        Don't have an account? Sign up.
+      </Link>
       <p>Forgot password?</p>
     </div>
   );

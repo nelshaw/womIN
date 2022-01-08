@@ -3,6 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import { Link } from "react-scroll";
 import "./signup.css";
+import { Link as LinkR, useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -20,8 +21,7 @@ function SignUp() {
   const [techstack, setTechStack] = useState([]);
 
   const [loading, setLoading] = useState(false);
-  //   const [mentorHidden, setMentorHidden] = useState(true);
-  //   const [detailsHidden, setDetailsHidden] = useState(true);
+  const navigate = useNavigate();
 
   const techOptions = [
     "Java",
@@ -63,9 +63,7 @@ function SignUp() {
           "content-type": "application/json",
         },
       };
-
       setLoading(true);
-
       console.log(techstack);
       if (isMentor) {
         const { data } = await axios.post(
@@ -85,7 +83,6 @@ function SignUp() {
           config
         );
         console.log(data);
-
         localStorage.setItem("userInfo", JSON.stringify(data));
       } else {
         const { data } = await axios.post(
@@ -93,12 +90,11 @@ function SignUp() {
           { name, email, password, university, program, year, coi, techstack },
           config
         );
-
         console.log(data);
-
         localStorage.setItem("userInfo", JSON.stringify(data));
       }
       setLoading(false);
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -154,14 +150,14 @@ function SignUp() {
           >
             Sign Up
           </Link>
+
+          <LinkR className="p" to="/login">
+            Already have an account? Log in.
+          </LinkR>
         </Form>
       </div>
 
-      <div
-        className="middleContainer"
-        id="isMentor"
-        //   hidden={mentorHidden}
-      >
+      <div className="middleContainer" id="isMentor">
         <h1>Are you a mentor or mentee?</h1>
 
         <div className="mBtnWrapper">
@@ -173,7 +169,6 @@ function SignUp() {
             smooth={true}
             onClick={(e) => {
               setIsMentor(true);
-              //   setDetailsHidden(false);
             }}
           >
             Mentor
@@ -187,7 +182,6 @@ function SignUp() {
             smooth={true}
             onClick={(e) => {
               setIsMentor(false);
-              //   setDetailsHidden(false);
             }}
           >
             Mentee
@@ -195,14 +189,7 @@ function SignUp() {
         </div>
       </div>
 
-      <div
-        className="mentorContainer"
-        id="mentor"
-        hidden={
-          // detailsHidden ||
-          !isMentor
-        }
-      >
+      <div className="mentorContainer" id="mentor" hidden={!isMentor}>
         <h1>Mentor Details</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="university">
@@ -268,14 +255,7 @@ function SignUp() {
         </Form>
       </div>
 
-      <div
-        className="menteeContainer"
-        id="mentee"
-        hidden={
-          // detailsHidden ||
-          isMentor
-        }
-      >
+      <div className="menteeContainer" id="mentee" hidden={isMentor}>
         <h1>Mentee Details</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="university">
