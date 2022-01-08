@@ -1,51 +1,23 @@
 import React from "react";
- import "./networkWidget.css";
- import {Person} from "@material-ui/icons";
+ import "./companyDashboard.css";
 
- export default function NetworkWidget(){
+ export default function CompanyDashboard(){
      return(
          <div className="networkWidget">
-             <span className="title">Network</span>
              <ul className="connectionList">
                  <li className="connection">
                  {/* <img src="image.jp" alt="" className="image"/> */}
                  <div className="userInfo">
-                     <span className="name">Sarah Sawan</span>
-                     <span className="role">Role: SWE</span>
-                 </div>
-                 <button className="button">
-                     <Person className="icon"/>
-                 </button>
-                 </li>
-                 <li className="connection">
-                 {/* <img src="" alt="" className="image"/> */}
-                 <div className="userInfo">
-                     <span className="name">Nadeen</span>
-                     <span className="role">Role: SWE</span>
-                 </div>
-                 <button className="button">
-                 <Person className="icon"/>
-                 </button>
-                 </li>
-                 <li className="connection">
-                 {/* <img src="" alt="" className="image"/> */}
-                 <div className="userInfo">
-                     <span className="name">Nawal</span>
-                     <span className="role">Role: SWE</span>
-                 </div>
-                 <button className="button">
-                 <Person className="icon"/>
-                 </button>
-                 </li>
-                 <li className="connection">
-                 {/* <img src="" alt="" className="image"/> */}
-                 <div className="userInfo">
-                     <span className="name">Victoria</span>
-                     <span className="role">Role: SWE</span>
-                 </div>
-                 <button className="button">
-                 <Person className="icon"/>
-                 </button>
+                         <img 
+                            src="https://press.aboutamazon.com/system/files-encrypted/nasdaq_kms/inline-images/Amazon-logo.jpg"
+                            alt="new"
+                            />
+                     <span className="name">1000+ Reviews</span>
+                     <span className="name">100+ Questions</span>
+                     <span className="name">Overall Score:</span>
+                     <span className="name">🌟🌟🌟🌟🌟</span>
+
+                </div>
                  </li>
              </ul>
 
