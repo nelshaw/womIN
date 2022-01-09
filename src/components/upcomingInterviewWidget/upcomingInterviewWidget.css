@@ -54,7 +54,7 @@
   font-size: 8px;
 }
 
-.button.Offer {
+.button.Interview {
   background-color: rgb(200, 214, 200);
 }
 
@@ -62,7 +62,7 @@
   background-color: rgb(240, 169, 169);
 }
 
-.button.Pending {
+.button.Online.Assessment {
   background-color: rgb(190, 187, 187);
 }
 

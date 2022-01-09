@@ -6,6 +6,32 @@
   justify-content: center;
 }
 
+.networkContainer > h1,
+.networkContainer > h2 {
+  font-size: 15px;
+}
+
+.topMentorContainer h2,
+.mentorContainer h2 {
+  font-size: 12px;
+}
+
+.profile div {
+  font-size: 12px;
+}
+
+.topMentorContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 10px;
+  background-color: #d1e2c4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
 .mentorContainer {
   display: flex;
   flex-direction: row;
@@ -30,4 +56,8 @@
 
 .profile b {
   color: white;
+}
+
+.topMentorContainer .profile {
+  margin: 15px;
 }

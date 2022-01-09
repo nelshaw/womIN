@@ -10,7 +10,7 @@ function Network() {
   const [companyM, setCompanyM] = useState([]);
   const [techM, setTechM] = useState([]);
 
-  const getAllMentors = async () => {
+  const getMentors = async () => {
     try {
       const config = {
         headers: {
@@ -20,11 +20,47 @@ function Network() {
 
       setLoading(true);
 
-      const { data } = await axios.get(
-        "http://localhost:5000/api/users/mentor",
-        config
+      const user = JSON.parse(localStorage.getItem("userInfo"));
+      const promises = [];
+
+      promises.push(
+        axios.get(
+          "http://localhost:5000/api/users/mentor/uni/" + user.university,
+          config
+        )
       );
-      setMentors(data);
+      user.coi.map((c) => {
+        promises.push(
+          axios.get(
+            "http://localhost:5000/api/users/mentor/company/" + c,
+            config
+          )
+        );
+      });
+      user.techstack.map((c) => {
+        promises.push(
+          axios.get(
+            "http://localhost:5000/api/users/mentor/techstack/" + c,
+            config
+          )
+        );
+      });
+
+      var allData = [];
+
+      Promise.all(promises).then((res) => {
+        res.map((d) => {
+          allData = [...allData, ...d.data];
+        });
+      });
+
+      Promise.allSettled(promises).then((res) => {
+        allData = allData.filter(
+          (value, index, self) =>
+            index === self.findIndex((t) => t.email === value.email)
+        );
+        setMentors(allData);
+      });
     } catch (err) {
       console.log("Error getting users" + err);
     }
@@ -136,8 +172,7 @@ function Network() {
 
   React.useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("userInfo")));
-    console.log(localStorage.getItem("userInfo"));
-    getAllMentors();
+    getMentors();
     getMentorsByUni();
     getMentorsByCompany();
     getMentorsByTechstack();
@@ -147,6 +182,33 @@ function Network() {
     <div className="networkContainer">
       <h1>Welcome back, {user["name"]}</h1>
       {loading && <h1>Loading...</h1>}
+
+      <h2>Your top mentor matches:</h2>
+      <div className="topMentorContainer">
+        {mentors.map((m) => {
+          return (
+            <div className="profile" key={m.email}>
+              <h2>{m.name}</h2>
+              <div>
+                works at <b>{m.company}</b>
+              </div>
+              <div>
+                went to <b>{m.university}</b>
+              </div>
+              <div>
+                is interested in{" "}
+                <b>
+                  <ul>
+                    {m.techstack.map((t) => {
+                      return <li>{t}</li>;
+                    })}
+                  </ul>
+                </b>
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
       <h2>Mentors that ...</h2>
       <div className="mentorContainer">
@@ -184,7 +246,14 @@ function Network() {
               <div className="profile" key={d.email}>
                 <h2>{d.name}</h2>
                 <div>
-                  is interested in <b>{d.techstack}</b>
+                  is interested in{" "}
+                  <b>
+                    <ul>
+                      {d.techstack.map((t) => {
+                        return <li>{t}</li>;
+                      })}
+                    </ul>
+                  </b>
                 </div>
               </div>
             );

@@ -13,13 +13,6 @@
   font-weight: 600;
 }
 
-/* .image {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    object-fit: cover;
-} */
-
 .connectionList {
   margin: 0px;
   padding: 0px;
@@ -51,6 +44,7 @@
 .button {
   display: flex;
   align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 5px;
   padding: 5px, 7px;
@@ -62,4 +56,8 @@
 .icon {
   font-size: 8px !important;
   margin: 5px;
+}
+
+.interests {
+  padding-inline-start: 15px;
 }
