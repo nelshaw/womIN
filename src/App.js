@@ -19,13 +19,11 @@ const App = () => {
     const user = localStorage.getItem("userInfo");
     if (user) {
       setIsLoggedIn(true);
-      console.log("user", user);
     }
   };
 
   useEffect(() => {
     checkLogin();
-    console.log("logged", isLoggedIn);
   }, []);
 
   return (

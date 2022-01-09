@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import "./personalJobDashboard.css";
 import ReadOnlyRow from "./dashboardComponents/ReadOnlyRow";
 import EditableRow from "./dashboardComponents/EditableRow";

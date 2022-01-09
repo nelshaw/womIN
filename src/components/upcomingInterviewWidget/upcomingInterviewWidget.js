@@ -52,7 +52,7 @@ export default function UpcomingInterviewWidget() {
             return (
               <tr className="interviewRow">
                 <td className="job">
-                  <img src></img>
+                  <img alt="" src></img>
                   <span className="interviewRole">{a.jobTitle}</span>
                 </td>
                 <td className="interviewDate">{a.dateApplied}</td>
