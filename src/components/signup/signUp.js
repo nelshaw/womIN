@@ -189,7 +189,7 @@ function SignUp() {
         </div>
       </div>
 
-      <div className="mentorContainer" id="mentor" hidden={!isMentor}>
+      <div className="mentorsContainer" id="mentor" hidden={!isMentor}>
         <h1>Mentor Details</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="university">
@@ -255,7 +255,7 @@ function SignUp() {
         </Form>
       </div>
 
-      <div className="menteeContainer" id="mentee" hidden={isMentor}>
+      <div className="menteesContainer" id="mentee" hidden={isMentor}>
         <h1>Mentee Details</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="university">

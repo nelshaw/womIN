@@ -18,8 +18,8 @@
   height: 100vh;
 }
 
-.mentorContainer,
-.menteeContainer {
+.mentorsContainer,
+.menteesContainer {
   flex-direction: column;
   padding: 10px;
   border-radius: 20px;
@@ -46,8 +46,8 @@ Form {
 }
 
 .signupContainer input,
-.mentorContainer input,
-.menteeContainer input {
+.mentorsContainer input,
+.menteesContainer input {
   background-color: #d1e2c4cb;
   border: none;
   border-radius: 2px;
@@ -58,8 +58,8 @@ Form {
 
 .signupBtn,
 .mBtn,
-.mentorContainer Button,
-.menteeContainer Button {
+.mentorsContainer Button,
+.menteesContainer Button {
   background-color: #d1e2c4;
   border: none;
   padding: 10px 15px;
@@ -74,8 +74,8 @@ Form {
   margin-right: 50px;
 }
 
-.mentorContainer label,
-.menteeContainer label {
+.mentorsContainer label,
+.menteesContainer label {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,8 +84,8 @@ Form {
   font-size: 1em;
 }
 
-.mentorContainer select,
-.menteeContainer select {
+.mentorsContainer select,
+.menteesContainer select {
   align-items: center;
   padding: 10px;
   border: none;
