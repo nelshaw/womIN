@@ -10,12 +10,6 @@ function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const [user, setUser] = useState([]);
-
-  const logout = () => {
-    localStorage.removeItem("userInfo");
-  };
-
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
@@ -40,7 +34,8 @@ function Login() {
 
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      navigate("/");
+      window.location.reload();
+      navigate("/", { replace: true });
     } catch (err) {
       console.log(err);
     }
