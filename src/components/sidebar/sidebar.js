@@ -1,6 +1,6 @@
 import React from "react";
 import "./sidebar.css";
-import { AccountCircle, Home, RateReview } from "@material-ui/icons";
+import { AccountCircle, Home, RateReview, ArrowDropDownCircleRounded, People, ExitToApp, EmojiEmotions } from "@material-ui/icons";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
@@ -24,9 +24,15 @@ export default function Sidebar() {
                 Home
               </li>
             </Link>
-            <Link to="/login" className="sidebarLink">
+            <Link to="/" className="sidebarLink">
               <li className="sidebarListItem">
                 <AccountCircle className="sidebarIcon" />
+                Profile
+              </li>
+            </Link>
+            <Link to="/login" className="sidebarLink">
+              <li className="sidebarListItem">
+                <EmojiEmotions className="sidebarIcon" />
                 Login
               </li>
             </Link>
@@ -38,19 +44,19 @@ export default function Sidebar() {
             </Link>
             <Link to="/personalJobDashBoard" className="sidebarLink">
               <li className="sidebarListItem">
-                <AccountCircle className="sidebarIcon" />
+                <ArrowDropDownCircleRounded className="sidebarIcon" />
                 Personal Dashboard
               </li>
             </Link>
             <Link to="/network" className="sidebarLink">
               <li className="sidebarListItem">
-                <AccountCircle className="sidebarIcon" />
+                <People className="sidebarIcon" />
                 Network
               </li>
             </Link>
             <span className="sidebarLink logoutBtn" onClick={logout}>
               <li className="sidebarListItem">
-                <AccountCircle className="sidebarIcon" />
+                <ExitToApp className="sidebarIcon" />
                 Logout
               </li>
             </span>

@@ -180,7 +180,7 @@ function PersonalJobDashBoard() {
   return (
     <div className="interviewTableContainer">
       <form onSubmit={handleEditFormSubmit}>
-        <h3 className="interviewPersonalTitle">Personal Interview</h3>
+        <h3 className="interviewPersonalTitle"></h3>
         <table className="interviewPersonalTable">
           <thead>
             <tr className="interviewTableHeader">

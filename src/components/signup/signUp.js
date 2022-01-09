@@ -212,7 +212,7 @@ function SignUp() {
             <Form.Control
               type="number"
               value={year}
-              placeholder="2021"
+              placeholder="Graduation Date"
               onChange={(e) => setYear(e.target.value)}
             />
           </Form.Group>
@@ -228,7 +228,7 @@ function SignUp() {
             <Form.Control
               type="number"
               value={yoe}
-              placeholder="1, 2, 3, ..."
+              placeholder="Year of Study"
               onChange={(e) => setYoe(e.target.value)}
             />
           </Form.Group>
@@ -278,7 +278,7 @@ function SignUp() {
             <Form.Control
               type="number"
               value={year}
-              placeholder="2021"
+              placeholder="Graduation Date"
               onChange={(e) => setYear(e.target.value)}
             />
           </Form.Group>
