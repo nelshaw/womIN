@@ -1,6 +1,6 @@
 import React from 'react';
 import "./sidebar.css";
-import { AccountCircle, Home, RateReview } from '@material-ui/icons';
+import { AccountCircle, Home, RateReview, Login } from '@material-ui/icons';
 import { Link } from "react-router-dom";
 
 export default function Sidebar(){
@@ -16,6 +16,12 @@ export default function Sidebar(){
                                 Home
                             </li>
                         </Link>
+                        <Link to="/login" className="sidebarLink">
+                            <li className="sidebarListItem">
+                                <AccountCircle className="sidebarIcon"/>   
+                                Login
+                            </li>
+                        </Link> 
                         <Link to="/companyReviews" className="sidebarLink">
                             <li className="sidebarListItem">
                                 <RateReview className="sidebarIcon"/>   
@@ -28,31 +34,15 @@ export default function Sidebar(){
                                 Personal Dashboard
                             </li>
                         </Link> 
-                    </ul>
-                </div>
-                <div class= "sidebarMenu">
-                    <h3 className="sidebarTitle">Quick Menu</h3>
-                    <ul className= "sidebarList">
-                        <Link to="/" className="sidebarLink">
-                            <li className="sidebarListItem">
-                                <Home className="sidebarIcon"/>   
-                                Home
-                            </li>
-                        </Link>
-                        <Link to="/companyReviews" className="sidebarLink">
-                            <li className="sidebarListItem">
-                                <RateReview className="sidebarIcon"/>   
-                                Company Reviews
-                            </li>
-                        </Link>
-                        <Link to="/personalJobDashBoard" className="sidebarLink">
+                        <Link to="/network" className="sidebarLink">
                             <li className="sidebarListItem">
                                 <AccountCircle className="sidebarIcon"/>   
-                                Personal Dashboard
+                                Network
                             </li>
                         </Link> 
                     </ul>
                 </div>
+                
             </div>
         </div>
     )

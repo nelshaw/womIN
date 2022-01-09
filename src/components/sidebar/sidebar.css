@@ -1,51 +1,54 @@
 .sidebar {
-    flex: 1;
-    height: 100%;
-    background-color: #afb8b2;
-    position: sticky;
-    top: 50px;
+  flex: 1;
+  display: flex;
+  height: 100vh;
+  background-color: #afb8b2;
+  position: sticky;
+  top: 50px;
+  width: auto;
 }
 
 .sidebarTitle {
-    font-size: small;
+  font-size: small;
 }
 
 .sidebarWrapper {
-    color: #555;
-    font-size: smaller;
-    padding-left: 10px;
+  color: #555;
+  font-size: smaller;
+  padding-left: 10px;
+  height: 100%;
 }
 
 .sidebarMenu {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .sidebarList {
-    list-style: none;
-    padding: 5px;
-    font-size: small;
-    border: none;
+  list-style: none;
+  padding: 5px;
+  font-size: small;
+  border: none;
 }
 
 .sidebarListItem {
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .sidebarListItem.active,
 .sidebarListItem:hover {
-    background-color: #d6d9d3;
+  background-color: #d6d9d3;
 }
 
 .sidebarIcon {
-    margin-right: 5px;
-    font-size: 15px !important;
+  margin-right: 5px;
+  font-size: 15px !important;
 }
 
 .sidebarLink {
-    color: #555;
-    text-decoration: none;
+  color: #555;
+  text-decoration: none;
 }

@@ -45,6 +45,11 @@ const registerUser = async (req, res) => {
       email: user.email,
       isMentor: user.isMentor,
       token: generateToken(user._id),
+      university: user.university,
+      program: user.program,
+      company: user.company,
+      coi: user.coi,
+      techstack: user.techstack,
     });
   } else {
     res.status(400);
@@ -64,6 +69,11 @@ const authUser = async (req, res) => {
       email: user.email,
       isMentor: user.isMentor,
       token: generateToken(user._id),
+      university: user.university,
+      program: user.program,
+      company: user.company,
+      coi: user.coi,
+      techstack: user.techstack,
     });
   } else {
     res.status(400);
@@ -71,4 +81,58 @@ const authUser = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, authUser };
+const getAllUsers = async (req, res) => {
+  const users = await User.find();
+  res.json(users);
+};
+
+const getUserById = async (req, res) => {
+  const user = await User.findById(req.params.id);
+
+  if (user) {
+    res.json(user);
+  } else {
+    res.status(404).json({ message: "User not found" });
+  }
+};
+
+const getMentors = async (req, res) => {
+  const user = await User.find({ isMentor: true });
+  console.log(user);
+  res.json(user);
+};
+
+const getMentorsByCompany = async (req, res) => {
+  const user = await User.find({ isMentor: true, company: req.params.company });
+  console.log(user);
+  res.json(user);
+};
+
+const getMentorsByUni = async (req, res) => {
+  const user = await User.find({
+    isMentor: true,
+    university: req.params.uni,
+  });
+  console.log(user);
+  res.json(user);
+};
+
+const getMentorsByTechstack = async (req, res) => {
+  const user = await User.find({
+    isMentor: true,
+    techstack: req.params.techstack,
+  });
+  console.log(user);
+  res.json(user);
+};
+
+module.exports = {
+  registerUser,
+  authUser,
+  getAllUsers,
+  getUserById,
+  getMentors,
+  getMentorsByCompany,
+  getMentorsByUni,
+  getMentorsByTechstack,
+};

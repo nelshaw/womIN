@@ -1,12 +1,17 @@
+body {
+  height: 100%;
+}
+
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 .container {
-    display: flex;
+  display: flex;
+  height: 100%;
 }
 
 .others {
-    flex: 4;
-    background-color: #e8e8e8;
+  flex: 4;
+  background-color: #e8e8e8;
 }

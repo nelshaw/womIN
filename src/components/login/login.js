@@ -10,6 +10,8 @@ function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const [user, setUser] = useState([]);
+
   const logout = () => {
     localStorage.removeItem("userInfo");
   };
@@ -46,7 +48,6 @@ function Login() {
 
   return (
     <div className="login-wrapper">
-      <h1>womIN</h1>
       <div className="loginContainer">
         {loading && <h1>Loading...</h1>}
         <h2>Login</h2>
