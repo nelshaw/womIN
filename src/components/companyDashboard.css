@@ -14,7 +14,7 @@
 }
 
 .reviews {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
     margin: 20px 0px;
@@ -35,4 +35,19 @@
 .icon {
     font-size: 8px !important;
     margin: 5px;
+}
+
+.amazonLogo {
+    max-width: 70%;
+    height: auto;
+}
+
+.bellLogo {
+    max-width: 30%;
+    height: auto;
+}
+
+.facebookLogo {
+    max-width: 50%;
+    height: auto;
 }
