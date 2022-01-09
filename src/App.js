@@ -4,6 +4,8 @@ import React from "react";
 import Home from "./components/home/home";
 import Sidebar from "./components/sidebar/sidebar";
 import Topbar from "./components/topbar/topbar";
+import Login from "./components/login/login";
+import SignUp from "./components/signup/signUp"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -18,7 +20,9 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route path="/companyReviews" element={<CompanyReviews />}/>
-        <Route path="/personalJobDashBoard" element={<PersonalJobDashBoard />}/>              
+        <Route path="/personalJobDashBoard" element={<PersonalJobDashBoard />}/>  
+        <Route path="/login" element={<Login/>}/>  
+        <Route path="/signUp" element={<SignUp/>}/>         
       </Routes>
     </div>
   </BrowserRouter>
