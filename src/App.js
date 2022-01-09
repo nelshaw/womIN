@@ -11,6 +11,7 @@ import Network from "./components/network/network";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import "./App.css";
+import Profile from "./components/profile/profile";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/network" element={<Network />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         ) : (
           <Routes>

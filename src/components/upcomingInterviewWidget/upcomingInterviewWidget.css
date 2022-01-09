@@ -55,11 +55,11 @@
 }
 
 .button.Interview {
-  background-color: rgb(200, 214, 200);
+  background-color: rgb(219, 219, 163);
 }
 
-.button.Rejected {
-  background-color: rgb(240, 169, 169);
+.button.Final.Interview {
+  background-color: rgb(175, 202, 175);
 }
 
 .button.Online.Assessment {

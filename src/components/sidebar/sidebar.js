@@ -1,6 +1,14 @@
 import React from "react";
 import "./sidebar.css";
-import { AccountCircle, Home, RateReview, ArrowDropDownCircleRounded, People, ExitToApp, EmojiEmotions } from "@material-ui/icons";
+import {
+  AccountCircle,
+  Home,
+  RateReview,
+  ArrowDropDownCircleRounded,
+  People,
+  ExitToApp,
+  EmojiEmotions,
+} from "@material-ui/icons";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
@@ -24,7 +32,7 @@ export default function Sidebar() {
                 Home
               </li>
             </Link>
-            <Link to="/" className="sidebarLink">
+            <Link to="/profile" className="sidebarLink">
               <li className="sidebarListItem">
                 <AccountCircle className="sidebarIcon" />
                 Profile
