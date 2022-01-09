@@ -4,7 +4,6 @@ import './search.css';
 class Search extends React.Component {
 	render() {
 		return (
-    
             <html lang="en">
                 <head>
                     <meta charset="UTF-8" />
@@ -13,8 +12,8 @@ class Search extends React.Component {
                     <link rel="stylesheet" href="search.css" />
                 </head>
                 <body>
-                    <div class="container">
-                        <form action="/" method="GET" class="form">
+                    <div class="searchBarContainer">
+                        <form action="/" method="GET" class="searchBarForm">
                             <input type="search" placeholder="Search" class="search-field" />
                             <button type="submit" class="search-button">
                             <img 

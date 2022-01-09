@@ -1,58 +1,73 @@
-.upcomingInterviewWidget {    
-    align-items: center;
-    margin-top: -250px;     
+.reviewWidget {
     flex: 2;
-     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-     -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-     padding: 10px;
-     background-color: white;
-     border-radius: 20px;
-     width: 60%;
-     margin-left: 30%;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border: 1px solid rgba(235, 235, 235, 0.75);
+    border-radius: 10px;
+}
 
- }
+.reviewTitle {
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: 600;
+}
 
- .interviewTitle {
-     margin: 0px;
-     padding: 0px;
-     font-size: 15px;
-     font-weight: 600;
- }
+.reviewTable {
+    width: 100%;
+    border-spacing: 5px;
+}
 
- .interviewTable {
-     width: 100%;
-     border-spacing: 15px;
- }
+.reviewRole {
+    display: flex;
+    align-items: left;
+    font-weight: 500;
+    font-size: 12px;
+    padding-bottom: 0px;
+}
 
- .interviewRole {
-     display: flex;
-     align-items: left;
-     font-weight: 500;
-     font-size: 15px;
- }
+.reviewJob {
+    margin: 0px;
+    padding: 0px;
+    align-items: left;
+    font-size: 12px;
+}
 
- .job {
-     margin: 0px;
-     padding: 0px;
-     align-items: left;
-     font-size: 12px;
- }
+.reviewTableHeader {
+    text-align: left;
+    font-size: 12px;
+    padding: 12px 0px;
+}
 
- .interviewTableHeader {
-     text-align: left;
-     font-size: 15px;
- }
+.reviewDate,
+.reviewLevel,
+.questionFrequence {
+    font-weight: 300;
+    font-size: 12px;
+}
 
- .interviewDate,
- .interviewCompany {
-     font-weight: 300;
- }
+.button {
+    padding-left: 5px;
+    padding-right: 7px;
+    border: none;
+    border-radius: 10px;
+    border-right: 0;
+    font-size: 8px;
+}
 
- .button {
-     padding: 5px 7px;
-     border: none;
-     border-radius: 10px;
-     background-color: rgb(240, 169, 169);
-     color: white;
- }
+.button.Offer {
+    background-color: rgb(200, 214, 200);
+}
 
+.button.Rejected {
+    background-color: rgb(240, 169, 169);
+}
+
+.button.Pending {
+    background-color: rgb(190, 187, 187);
+}
+
+.status {
+    padding-right: 0;
+}

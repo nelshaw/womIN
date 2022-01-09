@@ -3,24 +3,21 @@ import React from "react";
 
  export default function CompanyDashboard(){
      return(
-         <div className="networkWidget">
-             <ul className="connectionList">
-                 <li className="connection">
-                 {/* <img src="image.jp" alt="" className="image"/> */}
-                 <div className="userInfo">
+         <div className="companyDashboardWidget">
+             <ul className="reviewsList">
+                 <li className="reviews">
+                 <div className="reviewDetails">
                          <img 
                             src="https://press.aboutamazon.com/system/files-encrypted/nasdaq_kms/inline-images/Amazon-logo.jpg"
                             alt="new"
                             />
-                     <span className="name">1000+ Reviews</span>
-                     <span className="name">100+ Questions</span>
-                     <span className="name">Overall Score:</span>
-                     <span className="name">🌟🌟🌟🌟🌟</span>
-
+                     <span className="reviewData">1000+ Reviews</span>
+                     <span className="reviewData">100+ Questions</span>
+                     <span className="reviewData">Overall Score:</span>
+                     <span className="reviewData">🌟🌟🌟🌟🌟</span>
                 </div>
                  </li>
              </ul>
-
          </div>
      )
  } 

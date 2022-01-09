@@ -1,17 +1,16 @@
 import React from 'react'
 import CompanyOverview from './companyOverview';
 import Search from './search';
-import Topbar from './topbar';
 import CompanyDashboard from './companyDashboard';
+import './companyReview.css'
 
-const CompanyReviews = () => {
+function CompanyReviews() {
     return (
-        <div>
-            <Topbar/>
-            <Search/>
-        <div class="inline-block">
-            <CompanyDashboard/>
-            <CompanyOverview/>
+        <div className="companyReviewBlock">
+            {/* <Search/> */}
+            <div class="companyReviewWidget">
+                <CompanyDashboard/>
+                <CompanyOverview/>
             </div>
         </div>
     );
