@@ -1,0 +1,8 @@
+.companyReviewBlock {
+    flex: 4;
+}
+
+.companyReviewWidget {
+    display: flex;
+    margin: 20px;
+}
