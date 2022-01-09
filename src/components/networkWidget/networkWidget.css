@@ -1,16 +1,17 @@
 .networkWidget {
-    flex: 1;
-    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-    padding: 20px;
-    margin-right: 20px;
+  flex: 1;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  margin-right: 20px;
+  border: 1px solid rgba(235, 235, 235, 0.75);
+  border-radius: 10px;
 }
 
 .title {
-    font-size: 15px;
-    font-weight: 600;
+  font-size: 15px;
+  font-weight: 600;
 }
-
 
 /* .image {
     height: 20px;
@@ -20,45 +21,45 @@
 } */
 
 .connectionList {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
 }
 
 .connection {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
 }
 
 .userInfo {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .name {
-    font-weight: 600;
-    font-size: 12px;
+  font-weight: 600;
+  font-size: 12px;
 }
 
 .role {
-    font-weight: 400;
-    font-size: 8px;
+  font-weight: 400;
+  font-size: 8px;
 }
 
 .button {
-    display: flex;
-    align-items: center;
-    border: none;
-    border-radius: 5px;
-    padding: 5px, 7px;
-    cursor: pointer;
-    background-color: #eeeef7;
-    color: #555;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  padding: 5px, 7px;
+  cursor: pointer;
+  background-color: #eeeef7;
+  color: #555;
 }
 
 .icon {
-    font-size: 8px !important;
-    margin: 5px;
+  font-size: 8px !important;
+  margin: 5px;
 }

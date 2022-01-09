@@ -48,7 +48,6 @@ function Login() {
 
   return (
     <div className="login-wrapper">
-      <h1>womIN</h1>
       <div className="loginContainer">
         {loading && <h1>Loading...</h1>}
         <h2>Login</h2>
